@@ -383,6 +383,26 @@ assistance from your instructor and TAs.
 
         console.log(wordBank[207]);
 
+        // Computer Picks a Random Word
+        var word = wordBank[Math.random() * wordBank.length)];
+
+        // Hidden Answer Array to hide Randomly Selected Word
+        var hiddenAnswer = [];
+        for (var i = 0); i < word.length; i++) {
+            hiddenAnswer[i] = "_";
+        }
+
+        var remainingLetters = word.length;
+
+        // The Game 
+
+        while (remainingLetters > 0) {
+            alert(wordBank.join(" "));
+
+
+            // Get a Guess from Player 
+            var guess = prompt("Guess the Hidden Word in our Animal House Word Bank, or Click Cancel to Quit");
+
 
 
 
