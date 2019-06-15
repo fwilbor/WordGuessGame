@@ -25,10 +25,11 @@
         <quote>"Where Guessing the Right Word can Pay You Back!"</quote>
     </h2>
 
-    <img src="assets/images/PaybackWordGuess.jpg">
+    <img id="frank1" src="assets/images/PaybackWordGuess.jpg">
 
 
     <script type="text/javascript">
+
 
 
         // Create Word Guess Bank of Words 
@@ -260,7 +261,6 @@
             "Zebra"
         ];
 
-
         // Computer Picks a Random Word
         var word = wordBank[Math.floor(Math.random() * wordBank.length)];
 
@@ -304,6 +304,7 @@
         // Show the Answer and Congratulate the player
         alert(hiddenAnswer.join(" "));
         alert("Great Job! The Answer Was " + word);
+
 
 
 
