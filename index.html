@@ -29,10 +29,12 @@
 
 
     <script type="text/javascript">
+        // Show Image Splash Screen and Introduction of Character
+
 
 
         // Alert User Welcome to Payback Word Guess Game
-        alert("Welcome to The Payback Word Guess Game where Guessing the right Word can PAY YOU BACK! We're Excited to Have you here. Click Ok to Play, Click Cancel to Quit");
+        alert("Welcome to The Payback Word Guess Game, where Guessing the Right Word can PAY YOU BACK! We're Excited to Have you here. Click Ok to Play");
 
         // document.getElementById("frank1").addEventListener("onkeydown", myFunction);
 
@@ -66,8 +68,8 @@
         // the Game Loop
 
         while (remainingLetters > 0) {
-            alert(hiddenAnswer.join());
-
+            alert(hiddenAnswer.join(" "));
+            // Get a Guess from a Player 
             var guess = prompt("Guess a letter, or click Cancel to Quit");
             if (guess === null) {
                 break;
@@ -81,7 +83,7 @@
             else {
                 for (var j = 0; j < word.length; j++) {
                     if (word[j] === guess) {
-                        wordBank[j] = guess;
+                        hiddenAnswer[j] = guess;
                         remainingLetters--;
                     }
                 }
@@ -91,6 +93,9 @@
 
 
         }
+        // Show the Answer and Congratulate the Player 
+        alert(hiddenAnswer.join(" "));
+        alert("Good Job! The answer was " + word);
 
 
 
