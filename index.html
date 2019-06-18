@@ -6,7 +6,7 @@
 <!-- Solve All 4 Words and Win 1000000 dollars!-->
 <!-- Word Catagory is Always animalHouse-->
 
-<html class="no-js">
+<html>
 
 <head>
     <meta charset="utf-8">
@@ -14,98 +14,48 @@
     <title>Pay Back Word Guess Game</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
+    <div class="jumbotron">
 
-    <h1>Payback Word Guess Game</h1>
+        <h1>Payback Word Guess Game</h1>
 
-    <h2>
-        <quote>"Where Guessing the Right Word can Pay You Back!"</quote>
-    </h2>
-
-    <img id="frank1" src="assets/images/PaybackWordGuess.jpg" width="500px" height="500px">
-
-
-    <script type="text/javascript">
-        // Show Image Splash Screen and Introduction of Character
+        <h2>
+            <quote>"Where Guessing the Right Word can Pay You Back!"</quote>
+        </h2>
 
 
 
-        // Alert User Welcome to Payback Word Guess Game
-        alert("Welcome to The Payback Word Guess Game, where Guessing the Right Word can PAY YOU BACK! We're Excited to Have you here. Click Ok to Play");
+        <div>
 
-        // document.getElementById("frank1").addEventListener("onkeydown", myFunction);
+            <img id="frank1" src="./assets/images/PaybackWordGuess.jpg" width="=500px" height="500px">
 
-        // Create Word Guess Bank of Words 
+        </div>
 
-        var wordBank = [
-            "cat",
-            "dog",
-            "mouse",
-            "elephant",
-            "horse",
-            "bear",
-            "giraffe",
-            "monkey",
-            "fish",
-            "zebra"
-        ];
+        <!-- <div>
+            <img id="frank1" src="assets/images/PaybackWordGuess.jpg" width="500px" height="500px">
 
-        //Computer Picks a Random Word
-        var word = wordBank[Math.floor(Math.random() * wordBank.length)];
-
-        // Hidden Answer Array to hide Randomly Selected Word
-        var hiddenAnswer = [];
-        for (var i = 0; i < word.length; i++) {
-            console.log(word);
-            hiddenAnswer[i] = "_";
-        }
-
-        var remainingLetters = word.length;
-
-        // the Game Loop
-
-        while (remainingLetters > 0) {
-            alert(hiddenAnswer.join(" "));
-            // Get a Guess from a Player 
-            var guess = prompt("Guess a letter, or click Cancel to Quit");
-            if (guess === null) {
-                break;
-            }
-            else if (guess.length !== 1) {
-                alert("Please enter your single letter guess.");
+        </div> -->
+    </div>
+    <div id="instructions">
+        <button class="btn btn-primary" id="startButton">Click Here to Begin</button>
+    </div>
 
 
-            }
-
-            else {
-                for (var j = 0; j < word.length; j++) {
-                    if (word[j] === guess) {
-                        hiddenAnswer[j] = guess;
-                        remainingLetters--;
-                    }
-                }
-
-            }
-
-
-
-        }
-        // Show the Answer and Congratulate the Player 
-        alert(hiddenAnswer.join(" "));
-        alert("Good Job! The answer was " + word);
+    <div id="guesses"></div>
+    <div id="remainingletters"></div>
 
 
 
 
 
+    <script type="text/javascript" src="./assets/javascript/game.js"></script>
+    <!-- <script type="text/javascript" src="./assets/javascript/test.js"></script> -->
 
-
-
-
-    </script>
 
 
 
